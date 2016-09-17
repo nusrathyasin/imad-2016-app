@@ -16,12 +16,11 @@ body {
     font-weight: bold;
 }
 .fontname {
-    text-align:center;
     font-family:Times new roman;
 }
 
 .img-medium {
-    height: 200px;
+    height: 100px;
 }
 .img-medium1 {
     height:100px;
