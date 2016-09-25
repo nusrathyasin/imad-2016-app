@@ -29,7 +29,7 @@
 }
 #box1,#box2,#box3 {
     font-family:Times new roman;
-	border:1px solid white;
+	border:1 solid white;
 	width:250px;
 	height:200px;
 	margin-left:150px;
