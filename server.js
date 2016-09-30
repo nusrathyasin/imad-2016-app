@@ -29,6 +29,9 @@ app.get('/ui/article2.html', function (req, res) {
 app.get('/ui/article3.html', function (req, res) {
   res.sendFile(path.join(__dirname,'ui', 'article3.html'));
 });
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname,'ui', 'main.js'));
+});
 
 
 app.get('/ui/madi.png', function (req, res) {
