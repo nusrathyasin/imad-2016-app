@@ -18,5 +18,5 @@ button.onClick = function() {
 };
 //make the request
 request.open('GET','http://nusrathyasin.imad.hasura-app.io/counter',true);
-request.send();
+request.send(null);
 };
