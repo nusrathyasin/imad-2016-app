@@ -29,13 +29,12 @@
 }
 #box1,#box2,#box3 {
     font-family:Times new roman;
-
+    text-align:center;
 	width:250px;
 	height:200px;
-
+    margin-right:10px;margin-left:140px;
 	background-color:black;
 	color:white;
-	margin-left:20px;
 	float:left;
 }
 
