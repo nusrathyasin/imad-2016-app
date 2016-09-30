@@ -26,5 +26,7 @@ request.open('GET','http://nusrathyasin.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 $(document).ready(function(){
-    $(".hi").click();
+    $(document).click(function(){
+        console.log("Hoo...You clicked");
+    });
 });
