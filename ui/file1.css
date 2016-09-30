@@ -1,6 +1,7 @@
 .body {
     font-family: jokerman;
     margin-top: 75px;
+	
     margin:auto ;
 }
 .header {
@@ -29,21 +30,21 @@
 }
 #box1,#box2,#box3 {
     font-family:Times new roman;
-    text-align:center;
-	width:250px;
+	border:solid;
 	height:200px;
+	width:200px;
 	
-    margin-right:100px;margin-left:100px;
+	margin-left:150px;margin-right:10px;
 	background-color:black;
 	color:white;
+	padding-left:20px;
+	padding-bottom:4px;
 	float:left;
 }
 
 .img-medium {
-    height:150px;
+    height: 150px;
 }
 .img-medium1 {
     height:100px;
 }
-
-
