@@ -3,6 +3,7 @@ var button = document.getElementById('counter');
 //var counter=0;
 button.onclick = function() {
    // counter = counter+1;
+   
     //Create a request object
     var request = new XMLHttpRequest();
     
@@ -24,3 +25,6 @@ button.onclick = function() {
 request.open('GET','http://nusrathyasin.imad.hasura-app.io/counter',true);
 request.send(null);
 };
+$(document).ready(function(){
+    $(".hi").click();
+});
