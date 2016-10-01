@@ -51,7 +51,7 @@
     height:100px;
 }
 .footer{
-    display:block;
+    display:inline;
     padding-left:100px;
     margin:auto;
    /* padding-top:100px;*/
