@@ -49,11 +49,8 @@
     height:100px;
 }
 
-.footer{
-    padding-left:20px;
-    	
-}
-#name,#namelist {
+
+#namelist {
     background-color:black;
     color:white;
 }
