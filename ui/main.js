@@ -39,7 +39,12 @@ submit.onclick = function() {
                 var list = '';
                 for(var i=0;i<names.length;i++){
                     list += '<li style="border-bottom:solid">' + names[i] + '</li>';
+                    
                 }
+                document.write ('<p>Current time is: <span id="date-time">', new Date().toLocaleString(), '<\/span>.<\/p>')
+if (document.getElementById) onload = function () {
+	setInterval ("document.getElementById ('date-time').firstChild.data = new Date().toLocaleString()", 50)
+}
                 var ul = document.getElementById('namelist');
                 ul.innerHTML = list;
             
