@@ -51,7 +51,10 @@
 
 .footer{
     margin-left:20px;
-    	background-color:black;
+    	
+}
+#name,#namelist {
+    background-color:black;
     color:white;
 }
 
