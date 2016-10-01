@@ -48,7 +48,9 @@
 .img-medium1 {
     height:100px;
 }
-
+.footer{
+    padding-right:20px;
+}
 
 #namelist {
     background-color:black;
