@@ -2,7 +2,7 @@
     font-family: jokerman;
     margin-top: 75px;
 	
-    margin:auto ;
+    margin:0 auto ;
 }
 .header {
 	padding-left:20px;
@@ -51,8 +51,10 @@
     height:100px;
 }
 .footer{
-    padding-left:20px;
+    display:block;
+    padding-left:100px;
     margin:auto;
+   /* padding-top:100px;*/
     
 }
 
