@@ -34,14 +34,13 @@
 	height:200px;
 	width:200px;
 	margin:auto;
-/*	margin-left:150px;margin-right:10px;*/
-max-width:800;
+	margin-left:150px;margin-right:10px;
+
 	background-color:black;
 	color:white;
 	padding-left:20px;
-	padding-top:60px;
-	padding-right:20px;
-/*	padding-bottom:4px;*/
+	
+	padding-bottom:4px;
 	float:left;
 }
 
