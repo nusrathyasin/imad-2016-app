@@ -1,3 +1,11 @@
+var main = function(){
+
+	$('#recq2').click(function(){
+		$('#recq2').fadeIn('slow');
+	});
+};
+$(document).ready(main);
+
 //counter code
 var button = document.getElementById('counter');
 //var counter=0;
@@ -55,10 +63,3 @@ request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?name=' + 
 request.send(null);
 
 };
-var main = function(){
-
-	$(".rect").click(function(){
-		$(".rect").fadeIn('slow');
-	});
-};
-$(document).ready(main);
