@@ -60,5 +60,5 @@ var main = function(){
 	$(".rect").click(function(){
 		$(".rect").fadeIn('slow');
 	});
-});
+};
 $(document).ready(main);
