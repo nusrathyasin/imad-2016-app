@@ -1,7 +1,7 @@
 var main = function(){
 
-	$('#recq2').click(function(){
-		$('#recq2').fadeIn('slow');
+	$('#rec').click(function(){
+		$(this).fadeOut('slow');
 	});
 };
 $(document).ready(main);
