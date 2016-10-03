@@ -57,6 +57,71 @@
     
     
 }
+.rect{
+	
+	display:inline-block;
+	height:75px;
+	width:80px;
+	border-radius:10px;
+	float:center;
+	/* margin-left:auto;  */
+	/* margin-top:100px; */
+	background-color:red;
+	
+}
+
+#rec{
+	position:absolute;
+	
+	left:345px;
+	height:75px;
+	width:80px;
+	border-radius:10px;
+	
+	 
+	 
+	background-color:red;
+	
+}
+#recq{
+	position:absolute;
+	left:92px;
+	top:187px;
+	height:75px;
+	width:80px;
+	border-radius:10px;
+	
+	 
+	 
+	background-color:red;
+	
+}
+#recq1{
+	position:absolute;
+	left:177px;
+	top:187px;
+	height:75px;
+	width:80px;
+	border-radius:10px;
+	
+	 
+	 
+	background-color:red;
+	
+}
+#recq2{
+	position:absolute;
+	left:260px;
+	top:187px;
+	height:75px;
+	width:80px;
+	border-radius:10px;
+	
+	 
+	 
+	background-color:red;
+	
+}
 
 
 
