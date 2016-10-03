@@ -55,8 +55,10 @@ request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?name=' + 
 request.send(null);
 
 };
-$(document).ready(function(){
+var main = function(){
+
 	$(".rect").click(function(){
 		$(".rect").fadeIn('slow');
 	});
 });
+$(document).ready(main);
