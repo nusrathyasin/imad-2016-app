@@ -1,4 +1,4 @@
-var main = document.getElementById('rec');
+var main = document.getElementById('rec','rec');
 main.onclick = function() {
     main.style.display = 'none';
     
