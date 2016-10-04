@@ -1,6 +1,6 @@
 var main = document.getElementById('rec');
 main.onclick = function() {
-    $(this).fadeOut('slow');
+    rec.style.display = 'none';
     
 };
 
