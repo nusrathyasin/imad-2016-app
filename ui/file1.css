@@ -29,18 +29,14 @@
 .bold {
     font-weight: bold;
 }
-.box{
-    width:33.3%;
-    margin:1%
-}
+
 #box1,#box2,#box3 {
     font-family:Times new roman;
 	border:solid;
 	height:200px;
 	width:200px;
-margin:1%;
+
 /*	margin-left:150px;margin-right:10px;*/
-    display:inline;
 	background-color:black;
 	color:white;
 	padding-left:20px;
