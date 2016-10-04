@@ -1,6 +1,6 @@
 var main = document.getElementById('rec');
 main.onclick = function() {
-    rec.style.display = 'none';
+    main.style.display = 'none';
     
 };
 
