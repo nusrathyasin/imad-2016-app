@@ -1,8 +1,4 @@
-var main = document.querySelector('rec','rec');
-main.onclick = function() {
-    main.style.display = 'none';
-    
-};
+
 
 //counter code
 var button = document.getElementById('counter');
