@@ -29,6 +29,9 @@
 .bold {
     font-weight: bold;
 }
+.box{
+    width:33.3%;
+}
 #box1,#box2,#box3 {
     font-family:Times new roman;
 	border:solid;
@@ -54,7 +57,7 @@
 .footer{
 
     display:block;
-
+float:left;
     margin-left:20px;
     
     
