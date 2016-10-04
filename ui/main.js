@@ -1,4 +1,8 @@
-
+var main = document.getElementById('rec');
+main.onclick = function() {
+    $(this).fadeOut('slow');
+    
+};
 
 //counter code
 var button = document.getElementById('counter');
