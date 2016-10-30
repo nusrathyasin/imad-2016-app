@@ -3,6 +3,7 @@ body {
     font-family:cursive;
 	width:100%;
     margin:auto ;
+    padding-top:10px;
 }
 .header {
    
@@ -18,7 +19,7 @@ body {
 	
 }
 .center {
-    font-family:Joker man;
+    
     text-align: center;
 }
 
