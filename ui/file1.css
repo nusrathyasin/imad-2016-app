@@ -1,10 +1,11 @@
 body {
     
-    font-family:Vivaldi;
+    font-family:cursive;
 	width:100%;
     margin:auto ;
 }
 .header {
+    font-family:Vivaldi;
 	padding-left:20px;
 	font-size:120%;
 	background-color:black;
@@ -30,7 +31,7 @@ body {
 }
 
 #box1,#box2,#box3 {
-    font-family:cursive;
+    font-family:Times new roman;
 	border:solid;
 	height:auto;
 	width:auto;
