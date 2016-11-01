@@ -55,9 +55,11 @@ submit.onclick = function() {
                 }
             }
         };
-var nameInput =document.getElementById('name'); 
+var nameInput =document.getElementById('name','st_name');
 var name = nameInput.value;
+var st_name = nameInput.value;
 request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?name=' + name,true);
+request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?st_name=' + st_name,true);
 request.send(null);
 
 };
