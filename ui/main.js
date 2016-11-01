@@ -39,11 +39,15 @@ submit.onclick = function() {
                 var names = request.responseText;
                 names = JSON.parse(names);
                 var list = '';
+                for(var j=0;j<names.length;j++){
+                    list += '<li  class="commentbox">' + names[j] + '</li>';
+                    
+                
                 for(var i=0;i<names.length;i++){
                     list += '<li  class="commentbox">' + names[i] + '</li>';
                     
                 }
-               
+                }
                 var ul = document.getElementById('namelist');
                 ul.innerHTML = list;
             
