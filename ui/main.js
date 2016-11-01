@@ -39,15 +39,13 @@ submit.onclick = function() {
                 var names = request.responseText;
                 names = JSON.parse(names);
                 var list = '';
-                for(var j=0;j<names.length;j++){
-                    list += '<li  class="commentbox">' + names[j] + '</li>';
-                    
+                
                 
                 for(var i=0;i<names.length;i++){
                     list += '<li  class="commentbox">' + names[i] + '</li>';
                     
                 }
-                }
+                
                 var ul = document.getElementById('namelist');
                 ul.innerHTML = list;
             
@@ -59,7 +57,6 @@ var nameInput =document.getElementById('name','st_name');
 var name = nameInput.value;
 var st_name = nameInput.value;
 request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?name=' + name,true);
-request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?st_name=' + st_name,true);
 request.send(null);
 
 };
