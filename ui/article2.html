@@ -14,10 +14,10 @@
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
          <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 	    <style>
-		   // body{
+		    body{
  // background-color:rgb(3,20,48);
- // margin:auto;
- // width:100%;
+  margin:auto;
+  width:100%;
  // padding:20px;
  // color:white;
 // }
@@ -25,7 +25,7 @@
   margin:auto;
   border:3px solid white;
   border-width:2px 2px 2px 25px;
-  width:900px;
+  width:800px;
   overflow:auto;
   background-color:rgb(3,20,48);
     color:white;
@@ -57,9 +57,62 @@ font-size:120%;
   -o-background-size: cover;
   -webkit-background-size: cover;
   }
-	    </style>
-        <script>
-           $(document).ready(function(){
+	    .comment{
+  border:3px solid grey;
+  color:white;
+  width:90%;
+  height:auto;
+  padding-top:20px;
+}
+.commentbox{
+    border:1px dotted white;
+    color:white;
+    width:70%;
+    height:auto;
+    border-radius:10px;
+    padding-left:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.like{
+  position:fixed;
+  bottom:10px;
+  right:0;
+  margin-right:20px;
+ }
+.tog{
+  display:none;
+  position:fixed;
+  right:0;
+  bottom:80px;
+  margin-right:20px;
+  background:black;
+  border:3px solid grey;
+  height:210px;
+  width:200px;
+  color:white;
+  padding-left:10px;
+  
+}
+#borderr{
+ border:3px solid grey;
+  height:80px;
+  width:90px;
+  border-radius:20%;
+  
+  
+ 
+}
+#count{
+    font-size:45px;
+}
+
+         </style>
+         <script>
+             $(document).ready(function(){
+    $("#likeme").click(function(){
+        $(".tog").toggle(1000);
+    });
   $("#bat").mouseover(function(){
       this.src="http://www.topcount.co/wp-content/uploads/2015/07/8CWWdwA.jpg";
   }).mouseleave(function(){
@@ -130,8 +183,54 @@ The University of Waterloo honoured him with the Doctor of Engineering in 2010.<
     <div class="alert alert-success"> “Don’t take rest after your first victory because if you fail in second, more lips are waiting to say that your first victory was just luck.” </div>
      <div class="alert alert-danger">All Birds find shelter during a rain. But Eagle avoids rain by flying above the Clouds.</div>
    <h4>For More Details <a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" target="_blank" style="color:rgb(7, 244, 217)"> Click here</a></h4>
-     Designed by Nusrath</center>
+     </center>
   </div>
+  <div class="container-fluid">
+   
+     <h2 style="font-family:Vivaldi; color:white"><font size="20" >post your comments...</font></h2>
+ 
+<br>
+  <textarea id="name" rows="4" cols="50" placeholder="Type your comment here..."></textarea>
+
+          
+           <br>
+          
+           <button class="btn btn-default btn-md" id="submit_btn">Submit</button> 
+  
+ <br><br>
+    <div class="comment">
+       
+           
+      <ul id="namelist">
+      <div class="commentbox"></div> 
+      
+      </ul> <br>
+</div>
+  
+<hr>
+<div class="like">
+  <input id="likeme" type="image" title="Click me" class="img-circle" src="http://hdwallpaper2013.com/wp-content/uploads/2013/02/Facebook-Like-Logo-Pictures-HD-Wallpaper-1080x607.jpg" width="60" height="50" alt="Like"  />
+  
+
+</div>
+</div>
+<div class="tog">
+  <h5>If you like this page.Hit 'Like' button.</h5>
+  <center>
+  <div id="borderr">
+      <span id="count"> 0</span> 
+  </div><br>
+    <button id="counter"> <font color="black">LIKE <span class="glyphicon glyphicon-thumbs-up"></font> </button></center> 
+</div>
+<div class="container">
+<ul class="pager">
+    <li class="previous"><a href="#">Previous</a></li>
+  <li class="next"><a href="#">Next</a></li>
+</ul>
+<br>
+<h6 align="center"><font size="2" color="white">Designed by Nusrath</font></h6>
+
+</div>
         
        <script type="text/javascript" src="/ui/main.js">
         </script>
