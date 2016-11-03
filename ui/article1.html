@@ -3,26 +3,31 @@
     <head>
         <link href="/ui/file1.css" rel="stylesheet" />
         <style>
-            footer{
-    display:inline;
-    padding-left:100px;
-    margin-left:20px;
-   /* color:white;*/
-    
+        
+    #cat{
+  background:url("https://cloud.githubusercontent.com/assets/22195633/19958271/e639dc10-a1c3-11e6-8f7f-d5e4e735aee0.jpg");
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  }
+.wrapper{
+  padding:15px;
+  font-family: "Vivaldi";
+  
+  color:white;
 }
         </style>
     </head>
-<body bgcolor="aqua">
-<div class="header" >
-	<br>
-	<h1 align="left">NusrathYasin </h1> <br> 
-	<a href="http://nusrathyasin.imad.hasura-app.io/"><font color="white">Back to HOME</font></a>
-</div>
-	<hr>
+<body id="cat">
+    <div class="wrapper">
+    <h1><font size="20"<b>NusrathYasin</b></font></h1>
+    <a href="http://nusrathyasin.imad.hasura-app.io/"><font color="white">Back to HOME</font></a>
+  </div>
+
+<hr>
 
 
-<div class="side" >
-    <font color="black">
+<div class="container" >
 <h2>ANIMATION:</h2>	
 <br>
 <h3>ITS COOL!!! </h3>
@@ -31,26 +36,54 @@
 <h3>MAKE IT RAIN!!!</h3>
 <p><i><Enjoy the Rain...<br> U create more drops to pour on Winston <br>-just click the mouse to pour one more drop</i> </p>
 <h2>Make it Rain</h2><script src="https://www.khanacademy.org/computer-programming/spin-off-of-project-make-it-rain/4509792432160768/embed.js?editor=no&buttons=no&author=no&embed=yes"></script>
-</font>
 </div>
-<div class="footer" >
-		    <hr>
-		    Counter--><button id="counter" >Click me!</button> : <span id="count"> 0  </span>
-           
-           <hr>
-           <br>
-            <h3>Post your Comments..</h3>
-            <br>
-           <textarea  id="name" placeholder="Type your message here...." rows="5" cols="50" > </textarea> 
-           <!--<input type="text" id="name" placeholder="Type your message here...."> </input> -->
+<hr>
+
+<div class="container-fluid">
+   
+     <h2 style="font-family:Vivaldi; color:white"><font size="20" >post your comments...</font></h2>
+ 
+<br>
+  <textarea id="name" rows="4" cols="50" placeholder="Type your comment here..."></textarea>
+
+          
            <br>
           
-           <input type="submit" value="submit" id="submit_btn"></input> 
-           <ul id="namelist" >
-    
-           </ul>
+           <button class="btn btn-default btn-md" id="submit_btn">Submit</button> 
+  
+ <br><br>
+    <div class="comment">
+       
            
-        </div>
+      <ul id="namelist">
+      <div class="commentbox"></div> 
+      
+      </ul> <br>
+</div>
+  
+<hr>
+<div class="like">
+  <input id="likeme" type="image" title="Click me" class="img-circle" src="http://hdwallpaper2013.com/wp-content/uploads/2013/02/Facebook-Like-Logo-Pictures-HD-Wallpaper-1080x607.jpg" width="60" height="50" alt="Like"  />
+  
+
+</div>
+</div>
+<div class="tog">
+  <h5>If you like this page.Hit 'Like' button.</h5>
+  <center>
+  <div id="borderr">
+      <span id="count"> 0</span> 
+  </div><br>
+    <button id="counter"> <font color="black">LIKE <span class="glyphicon glyphicon-thumbs-up"></font> </button></center> 
+</div>
+<div class="container">
+<ul class="pager">
+  <li class="next"><a href="#">Next</a></li>
+</ul>
+<br>
+<h6 align="center"><font size="2" color="white">Designed by Nusrath</font></h6>
+
+</div>
        
        <script type="text/javascript" src="/ui/main.js">
         </script> 
