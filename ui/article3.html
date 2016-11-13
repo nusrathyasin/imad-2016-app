@@ -2,9 +2,191 @@
 <html>
     <head>
         <link href="/ui/file1.css" rel="stylesheet" />
+        <style>
+             body{
+	background-color:#210533;
+	margin:auto;
+	width:95%;
+	color:white;
+}
+#wrapper{
+	background-color:#2f0947;
+	width:90%;
+  height:auto;
+  margin:0 auto;
+	border-left:2px solid #161616;
+	border-right:2px solid #161616;
+}
+#header{
+	padding-left:20px;
+	padding-top:20px;
+	font-size:20px;
+	padding-bottom:20px;
+	border-bottom:2px solid #74647a;
+}
+#poster{
+  padding-bottom:20px;
+  padding-left:15px;
+  margin-right:25px;
+  border-bottom:2px solid #74647a;
+}
+#sidebar{
+  float:left;
+  margin-left:15px;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+#sidebar a{
+  text-decoration:none;
+  color:white;
+  font-size:20px;
+  margin-bottom:15px;
+  border:1px solid white;
+  display:block;
+  padding:15px;
+}
+#sidebar a:hover{
+  background:white;
+  color:#f20736;
+}
+#content{
+  float:left;
+  width:665px;
+  height:100%;
+  border-left:3px solid #74647a;
+  margin-left:10px;
+  padding-top:60px;
+  padding-left:15px;
+  height:auto;
+  color:white;
+}
+h2{
+  background:#210533;
+  padding:10px;
+}
+p{
+  font-size:20px;
+  text-indent:20px;
+}
+#arrow-up{
+  position:fixed;
+  bottom:50px;
+  right:0;
+  margin-right:20px;
+}
+#arrow-down{
+  position:fixed;
+  bottom:10px;
+  right:0;
+  margin-right:25px;
+}
+#smile{
+  float:right;
+  padding-right:20px;
+}
+.welcome{
+  display:none;
+  position:absolute;
+  left:550px;
+	top:70px;
+  color:white;
+  background:#210533;
+  font-size:10px;
+}
+#footer{
+  clear:both;
+  border-top:2px solid #74647a;
+}
+ 
+        </style>
+        <script>
+            $(document).ready(function(){
+    $("#smile").click(function(){
+        $(".welcome").toggle(1000);
+    });
+});
+        </script>
     </head>
 <body >
-        
+        <div id="wrapper">
+   <div id="header">
+     <img
+src="http://www.google.co.uk/logos/classicplus.png" height="80" width="200" alt="google logo" title="Google"/>
+     <input id="smile" type="image"     src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glowing-green-neon-icons-symbols-shapes/112446-glowing-green-neon-icon-symbols-shapes-smiley-happy.png"  height="50" width="50" alt="Smile" title="ClickMe" />
+       <div class="welcome">
+          <h1>Welcome to NusrathYasin's Website</h1>
+       </div><!-- End of welcome -->
+   </div> <!-- End of header -->
+<p align="center" style="font-family:Viner Hand ITC"><font size="5">Google-The Name You Know,The Tricks You Dont</font></p>
+   <div id="poster">
+      <center>
+      <img src="http://durofy.com/wp-content/uploads/2013/09/Google-Products.jpg"   alt="GooglePoster" title="GooglePoster" height="300"/>
+      </center>
+   </div><!-- End of poster -->
+   <div id="sidebar">
+      <h2 align="center">TRICKS</h2>
+      <a href="#one"> Do a barrel roll</a>
+      <a href="#two"> Zerg Rush</a>
+      <a href="#three"> Use Double Quotes for exact match results</a>
+      <a href="#four"> Google Gravity</a>
+      <a href="#five"> Play Atari Breakout</a>
+      <a href="#six"> Find Holidays</a>
+      <a href="#seven"> Blink HTML</a>
+      <a href="#eight"> Fun Facts</a>
+      <a href="#nine"> Find my phone</a>
+      <a href="#ten"> See this special shape </a>
+   </div><!-- End of sidebar-->
+   <div id="content">
+      <h1 id="one"><u>Do a barrel roll:</u><h1>
+      <img src="http://memeburn.sndytsvoxozgokstuvcm.netdna-cdn.com/wp-content/uploads/barrel-roll.jpg" width="400" height="200" title="Barrel roll"/>
+      <p>Just type <i>Do a barrel roll</i> in Google search and see how your screen rotates. There are lot more funny things to search on Google. Just continue reading to find out more.</p>
+      <h1 id="two"><u>Zerg Rush:</u><h1>
+      <img src="http://ats.ccg1iyj43ybcge.netdna-cdn.com/wp-content/uploads/2015/11/15-1024x506.png" width="400" height="200" title="Zerg rush"/>
+<p>Just type <i>Zerg Rush</i> in Google to play another fun game. You can also share the score of this game.</p>
+<h1 id="three"><u>Use Double Quotes for exact match results:</u><h1>
+      <img src="http://ats.ccg1iyj43ybcge.netdna-cdn.com/wp-content/uploads/2015/11/4B-1024x530.png" width="400" height="200" title="Use Double Quotes"/>
+      <p>Using quotes in the search query will give you the exact match and better results.</p>
+       <h1 id="four"><u>Google Gravity:</u><h1>
+       <img src="http://memeburn.sndytsvoxozgokstuvcm.netdna-cdn.com/wp-content/uploads/gravity.jpg" width="400" height="200" title="GoogleGravity"/>
+       <p>If, by any chance, you feeling like searching “Google gravity” and hitting “I’m feeling lucky”, don’t be surprised if Google comes crashing down around you the second you move the mouse. (Hint: you can disable Google’s instant results in your account preferences page to make sure you get the ‘I’m feeling lucky’ option).Also search for <i>Google space</i></p>
+       <h1 id="five"><u>Play Atari Breakout:</u><h1>
+       <img src="http://ats.ccg1iyj43ybcge.netdna-cdn.com/wp-content/uploads/2015/11/41-1024x500.png" width="400" height="200" title="Play  Atari Breakout"/>
+       <p>Most of us know Atari Breakout is a very old and popular game.
+If you ever got bored in Internet and want to play a game, you can play Atari Breakout in Google images by searching Atari Breakout.But first you must wait for the page to load it completely.</p>
+       <h1 id="six"><u>Find Holidays:</u><h1>
+       <img src="http://ats.ccg1iyj43ybcge.netdna-cdn.com/wp-content/uploads/2015/11/49.png" width="400" height="200" title="FindHolidays"/>
+       <p>Quickly find the details of holidays by searching “Festival name and Year”.</p>
+       <h1 id="seven"><u>Blink HTML:</u><h1>
+       <p>Google Blink HTML and see how the HTML blink in the page.</p>
+       <h1 id="eight"><u>Fun Facts:</u><h1>
+       <img src="http://ats.ccg1iyj43ybcge.netdna-cdn.com/wp-content/uploads/2016/01/84.png" width="400" height="200" title="Fun Facts"/>
+       <p>Do you want to know some fun facts? If yes, Google can entertain you with random fun facts without leaving Google homepage.
+Just search for “Fun facts” or “i’m feeling curious”.</p>
+       <h1 id="nine"><u>Find my phone:</u><h1>
+       <img src="http://ats.ccg1iyj43ybcge.netdna-cdn.com/wp-content/uploads/2016/01/86.png" width="400" height="200" title="Find my phone" />
+       <p>Google has launched Android device manager to find lost android devices. But now Google search can also this. Just search for “Find my phone” to locate your Android device remotely. But you need to login your Gmail account to locate it.</p>
+<h1 id="ten"><u>See this special shape:</u><h1>
+       <p>Search for <br>
+exp(-((x-4)^2+(y-4)^2)^2/1000) + exp(-((x +4)^2+(y+4)^2)^2/1000) + 0.1exp(-((x +4)^2+(y+4)^2)^2)+0.1exp(-((x -4)^2+(y-4)^2)^2
+<br>
+and Google will display a special shape.</p>
+    </div><!-- End of content-->
+
+ <a href="#header"><input id="arrow-up" type="image" title="GoUp" src="http://kompozer-tutorial.com/BootGifts/Arrows/arrow-34.png" width="50" height="50" /></a>
+<a href="#ten"><img id="arrow-down" src="http://payload350.cargocollective.com/1/6/200896/9316237/down-arrow.png" width="40" height="40" title="GoDown" /></a>
+  
+    <div id="footer">
+       <br>
+       <center>
+       <a href="https://twitter.com/" target="_blank" blank="_blank">
+       <img src="https://cdn3.iconfinder.com/data/icons/social-icons-5/607/Twitterbird.png" width="50" height="50" title="Twitter"/></a>  
+      <a href="https://www.gmail.com" target="_blank"><img src="http://creativebits.org/files/gmail-logo-flying-new.png" width="50" height="50" title="Gmail"/></a> 
+      <a href="https://www.facebook.com/" target="_blank"><img src="http://www.freeiconspng.com/uploads/facebook-logo-4.png" width="50" height="50" title="Facebook"/></a>
+	    </center>
+<br>
+      <h6 align="center"><font size="2" color="white">Designed by Nusrath</font</h6>
+     </div><!-- End of footer-->
+</div><!-- End of wrapper-->
        <script type="text/javascript" src="/ui/main.js">
         </script>
 </body>
