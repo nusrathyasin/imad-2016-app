@@ -18,6 +18,16 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname,'ui', 'index.html'));
 });
 
+function hash (input) {
+    var hashed = crypto.pbkdf25ync(input,salt,10000,512, 'sha512');
+    return hashed;
+}
+
+app.get('/hash/:input', function(req,res) {
+    var hashedString = hash(req.params.input,'this-is-same-random-string');
+    res.send(hashedString);
+});
+
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
     pool.query('SELECT * FROM test', function(err,result){
