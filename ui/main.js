@@ -5,10 +5,10 @@
 //login
 function loadLoginForm () {
     var loginHtml = `
-      <font color="white">
-       Username:<input type="text" id="username" placeholder="username" /> <br/><br/>
-       Password:<input type="password" id="password" />
-       </font>
+      
+       <h4 style="color:white">Username:</h4><input type="text" id="username" placeholder="username" /> <br/><br/>
+       <h4 style="color:white">Password:</h4><input type="password" id="password" />
+       
         <br/><br/>
         <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
