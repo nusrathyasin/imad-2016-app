@@ -6,8 +6,8 @@
 function loadLoginForm () {
     var loginHtml = `
       
-       Username: <input type="text" id="username" placeholder="username" /> <br/>
-       Password: <input type="password" id="password" />
+       Username:<input type="text" id="username" placeholder="username" /> <br/><br/>
+       Password:<input type="password" id="password" />
         <br/><br/>
         <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
