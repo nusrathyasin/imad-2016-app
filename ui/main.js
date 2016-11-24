@@ -105,7 +105,7 @@ function loadLogin () {
                  
                 loadLoggedInUser(this.responseText);
                 
-                document.open("/ui/homepage.html",);
+                document.open("/ui/homepage.html");
             
             } else {
                 loadLoginForm();
