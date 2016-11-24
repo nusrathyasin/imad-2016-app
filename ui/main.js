@@ -83,11 +83,13 @@ function loadLoginForm () {
         register.value = 'Registering...';
     
     };
+    
+request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/ui/homepage.html', true);
+request.send(null);
 }
 
 loadLoginForm();
 
-request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/ui/homepage.html', true);
 
 function loadLoggedInUser (username) {
     
