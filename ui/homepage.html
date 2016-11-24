@@ -13,13 +13,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
          <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-         <style>
-             html, body {
-  
-  padding:0;
-  margin:0%;
- 
- }
+            <style>
+             
 #cat{
   background:url("http://ailievski.com/wp-content/uploads/2014/11/bp_background_2_blue1.jpg");
   -moz-background-size: cover;
@@ -37,13 +32,18 @@
   font-size:25px;
 }
 .box{
+display:flex;
+margin-left:70px;
+margin-right:70px;
+}
+.box1{
        
-                width:30.3%;
-                float:left;
-                margin:1%;
+                
+              
              
-                height:200px;
-overflow:auto;
+             margin:1%;
+                height:250px;
+width:250px;
   border-radius:20px;
   
 	border:3px solid grey;
@@ -53,12 +53,41 @@ overflow:auto;
 	color:white;
 	
   }
-.box p h3{
-  font-weight:bold;
-  font-family:Times new roman;
+  .box2{
+       
+                
+              
+             
+             margin:1%;
+                height:250px;
+width:250px;
+  border-radius:20px;
   
+	border:3px solid grey;
+  padding-left:20px;
+	padding-bottom:4px;
+  padding-right:20px;
+	color:white;
+	
+  }
+  .box3{
+       
+                
+              
+             width:250px;
+             margin:1%;
+                height:250px;
+
+  border-radius:20px;
   
-}
+	border:3px solid grey;
+  padding-left:20px;
+	padding-bottom:4px;
+  padding-right:20px;
+	color:white;
+	
+  }
+
 .comment{
   border:3px solid grey;
   color:white;
@@ -93,7 +122,7 @@ overflow:auto;
   height:210px;
   width:200px;
   color:white;
-  padding-left:10px;
+  padding-left:10px; 
   
 }
 #borderr{
@@ -108,7 +137,21 @@ overflow:auto;
 #count{
     font-size:45px;
 }
+#login{
+float:right;
+color:white;
+}
+@media screen and (min-width: 300px){
 
+.box1, .box2, .box3{
+
+margin-left:0px !important;
+margin-right:0px;
+
+width:auto;
+
+}
+}
          </style>
          <script>
              $(document).ready(function(){
@@ -120,13 +163,9 @@ overflow:auto;
          </script>
     </head>
         
-        <body id="cat">
-      <div id="login"></div>     
-      
-        
-           
-            
-  <div class="wrapper">
+ <body id="cat">
+   <div id="login"></div>     
+ <div class="wrapper">
     <h1><font size="20"<b>NusrathYasin</b></font></h1>
   </div>
   <div class="container">
@@ -154,33 +193,43 @@ overflow:auto;
         <h3 style="font-family:Viner Hand ITC;color:white">Hi! I am Nusrath.This is my WebSite. <br>
    <font size="3" color="white">Thanks to IMAD team <img src="/ui/madi.png" height="70"/> for conducting this course and giving such a wonderful opportunity.</font></h3>
       </center>
-    
-    
-    
-<div class="box">
+     
+ <div class="box"> 
+
+    <div class="row">
+	
+<div class="col-md-4">
+<div class="box1">
   <h3><u>OBJECTIVE</u></h3>
             <p><i>Surfing and knowing new things alone can't make us to lift up.<br><br>Develop our knowledge and must execute it.</i></p>
-        </div>
-        <div class="box">
+        </div></div>
+		<div class="col-md-4">
+        <div class="box2">
           <h3><u>QUALIFICATION</u></h3>
           <p><i>FRESHER-B.E Graduate</i></p>
-                 </div>
-        <div class="box">
+                 </div></div>
+				 <div class="col-md-4">
+        <div class="box3">
             <h3><u>PROGRAMMING SKILLS</u></h3>
             <p><i>HTML,CSS,Bootstrap,Jquery and interested in Animation. </i></p>
-      </div> 
+      </div> </div>
+	
+	  </div>
+	    
+	  </div>
+	 
     </div>
-    </div>
+    
 <hr>
  
 
 
-<div class="container-fluid">
+<!-- <div class="container-fluid"> -->
    
-     <h2 style="font-family:Vivaldi; color:white"><font size="20" >post your comments...</font></h2>
+     <h2 style="font-family:Viner Hand ITC; color:white"><font size="5" >post your comments...</font></h2>
  
 <br>
-  <textarea id="name" rows="4" cols="50" placeholder="Type your comment here..."></textarea>
+  <textarea id="name" rows="4" cols="35" placeholder="Type your comment here..."></textarea>
 
           
            <br>
@@ -212,16 +261,15 @@ overflow:auto;
     <button id="counter"> <font color="black">LIKE <span class="glyphicon glyphicon-thumbs-up"></font> </button></center> 
 </div>
 <div id="contact">
-<h2 style="font-family:Vivaldi;color:white;margin-left:20px"><font size="30">contact via</font></h2> 
-<a href="https://twitter.com/" target="_blank" blank="_blank" class="header" ><font color="white">TWITTER </font>
+<h2 style="font-family:Viner Hand ITC;color:white;margin-left:20px"><font size="5">Contact </font></h2> 
+<a href="https://twitter.com/" target="_blank" blank="_blank" class="header" ><font color="white"> </font>
        <img src="https://cdn3.iconfinder.com/data/icons/social-icons-5/607/Twitterbird.png" width="50" height="50"/></a>  
-      <a href="https://www.gmail.com" target="_blank" class="header">GMAIL<img src="http://creativebits.org/files/gmail-logo-flying-new.png" width="50" height="50"/></a> 
-      <a href="https://www.facebook.com/" target="_blank" class="header">FACEBOOK <img src="http://www.freeiconspng.com/uploads/facebook-logo-4.png" width="50" height="50"/></a>
+      <a href="https://www.gmail.com" target="_blank" class="header"><img src="http://creativebits.org/files/gmail-logo-flying-new.png" width="50" height="50"/></a> 
+      <a href="https://www.facebook.com/" target="_blank" class="header"> <img src="http://www.freeiconspng.com/uploads/facebook-logo-4.png" width="50" height="50"/></a>
 </div>     
   
 <br><br>
-</div>
-<div class="container">
+
 <ul class="pager">
   <li class="next"><a href="/ui/article1.html">Next</a></li>
 </ul>
