@@ -99,6 +99,10 @@ app.get('/check-login', function (req, res) {
    }
 });
 
+app.get('/login', function (req, res) {
+   delete req.session.auth;
+    res.send('http://nusrathyasin.imad.hasura-app.io/ui/homepage.html');
+});
 
 app.get('/logout', function (req, res) {
    delete req.session.auth;
