@@ -89,6 +89,7 @@ app.get('/check-login', function (req, res) {
        pool.query('SELECT * FROM "user" WHERE id = $1', [req.session.auth.userId], function (err, result) {
            if (err) {
               res.status(500).send(err.toString());
+                res.sendFile(path.join(__dirname,'ui', 'homepage.html'));
            } else {
               res.send(result.rows[0].username);    
            }
@@ -97,9 +98,7 @@ app.get('/check-login', function (req, res) {
        res.status(400).send('You are not logged in');
    }
 });
-app.get('/ui/homepage.html', function (req, res) {
-  res.sendFile(path.join(__dirname,'ui', 'homepage.html'));
-});
+
 
 app.get('/logout', function (req, res) {
    delete req.session.auth;
