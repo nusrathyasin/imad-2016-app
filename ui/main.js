@@ -91,7 +91,11 @@ function loadLoggedInUser (username) {
         <h3> Hi <i>${username}</i></h3>
         <a href="/logout">Logout</a>
     `;
+    request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/ui/homepage.html', true);
+    request.send(null);
+    
 }
+
 
 function loadLogin () {
     // Check if the user is already logged in
