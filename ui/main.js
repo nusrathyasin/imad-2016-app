@@ -85,6 +85,10 @@ function loadLoginForm () {
     };
 }
 
+
+request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/ui/homepage.html', true);
+    request.send(null);
+
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login');
     loginArea.innerHTML = `
@@ -105,7 +109,7 @@ function loadLogin () {
                  
                 loadLoggedInUser(this.responseText);
                 
-                window.open('http://nusrathyasin.imad.hasura-app.io/ui/homepage.html');
+                
             
             } else {
                 loadLoginForm();
