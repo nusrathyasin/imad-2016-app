@@ -20,7 +20,7 @@ function loadLoginForm () {
     // Submit username/password to login
     var submit = document.getElementById('login_btn');
     submit.onclick = function () {
-        window.open('http://nusrathyasin.imad.hasura-app.io/ui/homepage');
+        
         // Create a request object
         var request = new XMLHttpRequest();
         
@@ -30,6 +30,7 @@ function loadLoginForm () {
               // Take some action
               if (request.status === 200) {
                   submit.value = 'Sucess!';
+                  window.open('http://nusrathyasin.imad.hasura-app.io/ui/homepage.html');
               } else if (request.status === 403) {
                   submit.value = 'Invalid credentials. Try again?';
               } else if (request.status === 500) {
