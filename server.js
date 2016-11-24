@@ -23,7 +23,7 @@ app.use(session({
 }));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname,'ui', 'homepage.html'));
+  res.sendFile(path.join(__dirname,'ui', 'index.html'));
 });
 
 function hash (input,salt) {
