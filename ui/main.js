@@ -10,7 +10,7 @@ function loadLoginForm () {
        <h4 style="color:white">Password:</h4><input type="password" id="password" />
        
         <br/><br/>
-        <a href="http://nusrathyasin.imad.hasura-app.io/ui/homepage.html"><input type="submit" id="login_btn" value="Login" /></a>
+        <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
         `;
     document.getElementById('login_area').innerHTML = loginHtml;
@@ -91,8 +91,7 @@ function loadLoggedInUser (username) {
         <h3> Hi <i>${username}</i></h3>
         <a href="/logout">Logout</a>
     `;
-    request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/ui/homepage.html', true);
-    request.send(null);
+    
     
 }
 
@@ -104,6 +103,8 @@ function loadLogin () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 loadLoggedInUser(this.responseText);
+                request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/ui/homepage.html', true);
+    request.send(null);
             } else {
                 loadLoginForm();
             }
