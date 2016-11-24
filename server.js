@@ -117,8 +117,7 @@ app.get('/test-db',function(req,res){
     });
 });
 
-app.get('/ui/homepage.html', function (req, res) {
-    delete req.session.auth;
+app.get('/ui/homepage.html', function (req, res){
   res.sendFile(path.join(__dirname,'ui', 'homepage.html'));
 });
 
