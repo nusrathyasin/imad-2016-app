@@ -10,7 +10,7 @@ function loadLoginForm () {
        <h4 style="color:white">Password:</h4><input type="password" id="password" />
        
         <br/><br/>
-        <a href="http://nusrathyasin.imad.hasura-app.io/ui/homepage.html" target="_blank"><input type="submit" id="login_btn" value="Login" /></a>
+       <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
         `;
     document.getElementById('login_area').innerHTML = loginHtml;
@@ -64,6 +64,7 @@ function loadLoginForm () {
               // Take some action
               if (request.status === 200) {
                   alert('User created successfully');
+                  window.open('http://nusrathyasin.imad.hasura-app.io/ui/homepage');
                   register.value = 'Registered!';
               } else {
                   alert('Could not register the user');
