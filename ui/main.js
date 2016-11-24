@@ -10,7 +10,7 @@ function loadLoginForm () {
        <h4 style="color:white">Password:</h4><input type="password" id="password" />
        
         <br/><br/>
-        <input type="submit" id="login_btn" value="Login" />
+        <a href="http://nusrathyasin.imad.hasura-app.io/ui/homepage.html" target="_blank"><input type="submit" id="login_btn" value="Login" /></a>
         <input type="submit" id="register_btn" value="Register" />
         `;
     document.getElementById('login_area').innerHTML = loginHtml;
@@ -84,11 +84,10 @@ function loadLoginForm () {
     
     };
     
-request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/ui/homepage.html', true);
-request.send(null);
+
 }
 
-loadLoginForm();
+
 
 
 function loadLoggedInUser (username) {
