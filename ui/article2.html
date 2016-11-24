@@ -14,22 +14,22 @@
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
          <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 	    <style>
-		    body{
- // background-color:rgb(3,20,48);
+		body{
+  background-color:rgb(3,20,48);
   margin:auto;
   width:100%;
- // padding:20px;
- // color:white;
-// }
+  padding:20px;
+  color:white;
+ }
 .main{
   margin:auto;
   border:3px solid white;
   border-width:2px 2px 2px 25px;
-  width:800px;
+  width:650px;
   overflow:auto;
-  background-color:rgb(3,20,48);
-    color:white;
+  
 }
+
 section{
 text-align:justify;
 padding:0px 20px 0px 40px;
@@ -43,17 +43,18 @@ font-size:120%;
 }
 
 .wrapper{
-  padding:15px;
+  padding-top:35px;
   font-family: "Vivaldi";
   
   color:white;
 }
      
     #cat{
-  background:url("https://cloud.githubusercontent.com/assets/22195633/19837197/a0da27ba-9eda-11e6-8a84-f917e8510d8d.jpg");
+  background:url("http://ailievski.com/wp-content/uploads/2014/11/bp_background_2_blue1.jpg");
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
+  padding-bottom:50px;
   }
 	    .comment{
   border:3px solid grey;
@@ -104,7 +105,18 @@ font-size:120%;
 #count{
     font-size:45px;
 }
-
+#login{
+font-family:Viner Hand ITC;
+float:right;
+color:white;
+margin-right:40px;
+}
+@media screen and (max-width: 750px){
+	.main{
+	width:auto;
+	
+	}
+	}
          </style>
          <script>
              $(document).ready(function(){
@@ -120,20 +132,20 @@ font-size:120%;
 
         </script>
     </head>
-<body id="cat">
+<body><div id="cat">
     <div id="login"></div>
     <div class="wrapper">
     <h1><font size="20"<b>NusrathYasin</b></font></h1>
-    <a href="http://nusrathyasin.imad.hasura-app.io/" style="font-family:Viner Hand ITC; color:white"><center>Back to HOME</center> </a>
+    <a href="http://nusrathyasin.imad.hasura-app.io/ui/homepage.html" style="font-family:Viner Hand ITC; color:white"><center>Back to HOME</center> </a>
   </div>
-
+</div>
 <hr>
 <h3 style="font-family:Viner Hand ITC; color:white;padding-left:20px">This article is all about Dr.A.P.J.ABDUL KALAM</h3>
-
+<div class="container">
  <div class="main">
   <center>
    <h1><b>Dr.A.P.J.ABDUL KALAM</b></h1>
-   <img id="bat" src="https://cloud.githubusercontent.com/assets/22195633/19617422/8a44cbd8-984d-11e6-8160-466708895115.jpg"  />
+   <img id="bat" src="https://cloud.githubusercontent.com/assets/22195633/19617422/8a44cbd8-984d-11e6-8160-466708895115.jpg" />
    </center>
  <section>
    <p>Bharat Ratna Avul Pakir Jainulabdeen Abdul Kalam, generally known as <mark>Dr. A.P.J. Abdul Kalam</mark>, was the 11th President of India (2002-2007). </p>
@@ -173,9 +185,10 @@ The University of Waterloo honoured him with the Doctor of Engineering in 2010.<
    <p>
    In his book 'India 2020', he recommended plans to make the nation a fully developed one by the year 2020. His interactions with the student community and his motivational speeches made him quite popular among the youth. In 2011, he launched a mission called 'What Can I Give Movement' aimed at the youth of India, which focused on defeating corruption in the country.</p>
    </section>
+   </div>
    <br>
    <center>
-     <div class="container-fluid">
+    <div class="container">
        <h2>Quotes </h2>
        <div class="alert alert-warning">...Success is when your "Signature" changes into "Autograph"...</div>
      </div>
@@ -183,13 +196,13 @@ The University of Waterloo honoured him with the Doctor of Engineering in 2010.<
      <div class="alert alert-danger">All Birds find shelter during a rain. But Eagle avoids rain by flying above the Clouds.</div>
    <h4>For More Details <a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" target="_blank" style="color:rgb(7, 244, 217)"> Click here</a></h4>
      </center>
-  </div>
-  <div class="container-fluid">
+  
+  <hr>
    
-     <h2 style="font-family:Vivaldi; color:white"><font size="20" >post your comments...</font></h2>
+     <h2 style="font-family:Viner Hand ITC; color:white"><font size="5" >post your comments...</font></h2>
  
 <br>
-  <textarea id="name" rows="4" cols="50" placeholder="Type your comment here..."></textarea>
+  <textarea id="name" rows="4" cols="35" placeholder="Type your comment here..."></textarea>
 
           
            <br>
@@ -229,8 +242,9 @@ The University of Waterloo honoured him with the Doctor of Engineering in 2010.<
 <br>
 <h6 align="center"><font size="2" color="white">Designed by Nusrath</font></h6>
 
-</div>
-        
+</div></div>
+  </div>
+ 
        <script type="text/javascript" src="/ui/main.js">
         </script>
         
