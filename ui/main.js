@@ -89,14 +89,14 @@ function loadLoginForm () {
 
 
 function loadLoggedInUser (username) {
-    request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/ui/homepage.html', true);
-    request.send(null);
+    
     var loginArea = document.getElementById('login');
     loginArea.innerHTML = `
         <h3> Hi <i>${username}</i></h3>
         <a href="/logout">Logout</a>
     `;
-    
+    request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/ui/homepage.html', true);
+    request.send(null);
     
 }
 
