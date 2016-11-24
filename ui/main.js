@@ -106,7 +106,7 @@ function loadLogin () {
         }
     };
     
-    request.open('GET', '/check-login', true);
+    request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/homepage', true);
     request.send(null);
 }
 
