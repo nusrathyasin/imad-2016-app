@@ -64,8 +64,9 @@ function loadLoginForm () {
               // Take some action
               if (request.status === 200) {
                   alert('User created successfully');
+                       register.value = 'Registered!';
                   window.open('http://nusrathyasin.imad.hasura-app.io/ui/homepage');
-                  register.value = 'Registered!';
+             
               } else {
                   alert('Could not register the user');
                   register.value = 'Register';
