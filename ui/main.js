@@ -106,7 +106,7 @@ function loadLogin () {
                 loadLoggedInUser(this.responseText);
                 
                 document.open("http://nusrathyasin.imad.hasura-app.io/ui/homepage.html");
-                document.close();
+            
             } else {
                 loadLoginForm();
             }
