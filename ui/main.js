@@ -88,7 +88,6 @@ function loadLoginForm () {
 loadLoginForm();
 
 request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/ui/homepage.html', true);
- request.send(null);
 
 function loadLoggedInUser (username) {
     
