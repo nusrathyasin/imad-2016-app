@@ -118,6 +118,7 @@ app.get('/test-db',function(req,res){
 });
 
 app.get('/ui/homepage.html', function (req, res) {
+    delete req.session.auth;
   res.sendFile(path.join(__dirname,'ui', 'homepage.html'));
 });
 
