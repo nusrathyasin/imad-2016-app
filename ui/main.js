@@ -103,7 +103,8 @@ function loadLogin () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 loadLoggedInUser(this.responseText);
-                <a href="/login">Login</a>
+                request.open('GET', '/login', true);
+                 request.send(null);
                 
             } else {
                 loadLoginForm();
