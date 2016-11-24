@@ -104,7 +104,6 @@ function loadLogin () {
             if (request.status === 200) {
                 loadLoggedInUser(this.responseText);
                 request.open('GET', 'http://nusrathyasin.imad.hasura-app.io/ui/homepage.html', true);
-    request.send(null);
             } else {
                 loadLoginForm();
             }
