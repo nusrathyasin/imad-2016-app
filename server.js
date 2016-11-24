@@ -116,6 +116,9 @@ app.get('/test-db',function(req,res){
     });
 });
 
+app.get('/ui/homepage.html', function (req, res) {
+  res.sendFile(path.join(__dirname,'ui', 'homepage.html'));
+});
 
 
 app.get('/ui/file1.css', function (req, res) {
