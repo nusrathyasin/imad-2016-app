@@ -179,7 +179,7 @@ button.onclick = function() {
     
 };
 //make the request
-request.open('GET','http://nusrathyasin.imad.hasura-app.io/counter',true);
+request.open('GET','http://nusrathyasin.imad.hasura-app.io/counter1',true);
 request.send(null);
 };
 
