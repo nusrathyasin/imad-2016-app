@@ -256,12 +256,12 @@ function loadComments () {
 loadComments();
 //
 //comment box
-//var submit =document.getElementById('submit_btn');
-//submit.onclick = function() {
-    //create a request object
-   // var request = new XMLHttpRequest();
-    //capture response nd store it in a variable
-    //request.onreadystatechange = function() {
+var submit =document.getElementById('submit_btn');
+submit.onclick = function() {
+    create a request object
+   var request = new XMLHttpRequest();
+    capture response nd store it in a variable
+    request.onreadystatechange = function() {
         if(request.readyState === XMLHttpRequest.DONE){
             if(request.status ===200){
                 var names = request.responseText;
