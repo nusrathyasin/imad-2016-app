@@ -186,29 +186,32 @@ request.send(null);
 var submit =document.getElementById('submit_btn');
 submit.onclick = function() {
     //create a request object
-    var request = new XMLHttpRequest();
-    //capture response nd store it in a variable
-    request.onreadystatechange = function() {
-        if(request.readyState === XMLHttpRequest.DONE){
-            if(request.status ===200){
-                var names = request.responseText;
-                names = JSON.parse(names);
-                var list = '';
-                
-                
-                for(var i=0;i<names.length;i++){
-                    list += '<li  class="commentbox">' + names[i] + '</li>';
-                    
-                }
-                
-                var ul = document.getElementById('namelist');
-                ul.innerHTML = list;
-            
-        
-                }
-            }
-        };
-var nameInput =document.getElementById('name');
+var request = new XMLHttpRequest();
+	request.onreadystatechange=function(){
+		if(request.readyState===XMLHttpRequest.DONE)
+		{
+			if(request.status===200)
+			{
+				var names= request.responseText;
+				
+				names = JSON.parse(names);
+				var list="";
+				for(var i=0;i<names.length;i++)
+				{
+				   
+			list="<div><div style='float:left;width:50%'><b>"+names[i]+"</b></div><div style='float:right;text-align:right;width:50%'><b>"+names[i+2]+"</b></div><hr/><br/>"+names[i+1]+"</div>" + list;
+				i=i+2;
+				}
+			var ul = document.getElementById('namelist');
+			list+="<p id='db'></p><br/>";
+			ul.innerHTML=list;
+			}
+		}
+	}
+	}
+
+
+   var nameInput =document.getElementById('name');
 var name = nameInput.value;
 request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?name=' + name,true);
 request.send(null);
