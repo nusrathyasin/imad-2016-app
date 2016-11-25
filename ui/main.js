@@ -212,7 +212,7 @@ var request = new XMLHttpRequest();
 	};
 
 
-   var nameInput =document.getElementById('names');
+   var nameInput =document.getElementById('name');
 var name = nameInput.value;
 var firstname = document.getElementById('firstname').value;
 
