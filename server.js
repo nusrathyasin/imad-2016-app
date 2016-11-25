@@ -123,11 +123,12 @@ app.get('/counter1',function(req,res){
 
 var names = [];
 app.get('/submit-name', function(req,res){
-    var today = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
-        var name1 = req.query.name;
     var name = req.query.name;
+    var today = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+        var firsrname = req.query.firstname;
+    
    names.push(today);
-   names.push(name1);
+   names.push(firstname);
    names.push(name);
    
    res.send(JSON.stringify(names));
