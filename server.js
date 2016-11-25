@@ -124,7 +124,7 @@ app.get('/counter1',function(req,res){
 var names = [];
 app.get('/submit-name', function(req,res){
     var today = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
-        var name1 = req.query.name1;
+        var name1 = req.query.name;
     var name = req.query.name;
    names.push(today);
    names.push(name1);
