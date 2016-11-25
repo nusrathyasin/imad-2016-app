@@ -68,3 +68,4 @@ function loadComments () {
 }
 
 loadComments();
+loadCommentForm ();
