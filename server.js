@@ -121,6 +121,11 @@ app.get('/counter',function(req,res){
     counter = counter + 1;
     res.send(counter.toString());
 });
+var counter1 = 0;
+app.get('/counter',function(req,res){
+    counter1 = counter1 + 1;
+    res.send(counter1.toString());
+});
 app.get('/ui/homepage.html', function (req, res){
   res.sendFile(path.join(__dirname,'ui', 'homepage.html'));
 });
