@@ -199,7 +199,7 @@ var request = new XMLHttpRequest();
 				for(var i=0;i<names.length;i++)
 				{
 				   
-			                   // list += '<li  class="commentbox">' + names[i] + '</li>';
+			                    list += '<li  class="commentbox">' + names[i] + '</li>';
 				}
 			var ul = document.getElementById('namelist');
 			list+="<p id='db'></p><br/>";
