@@ -130,11 +130,7 @@ app.get('/submit-name', function(req,res){
          //   names.push(firstname);
 	names.push(name); 
    names.push(today);
-   
-	}
-      
-
-   
+ 
    res.send(JSON.stringify(names));
 });
 
