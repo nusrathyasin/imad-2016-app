@@ -122,7 +122,7 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 var counter1 = 0;
-app.get('/counter',function(req,res){
+app.get('/counter1',function(req,res){
     counter1 = counter1 + 1;
     res.send(counter1.toString());
 });
