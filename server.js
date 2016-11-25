@@ -123,19 +123,22 @@ app.get('/counter1',function(req,res){
 
 var names = [];
 app.get('/submit-name', function(req,res){
-    var name = req.query.name;                                                                                                                                                                           
+    var name = req.query.name;                                                                                                             var firsrname = req.query.firstname;                                                               
     var today = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
-        //var firsrname = req.query.firstname;
-        //if(name!==''||firstname!==''){
+       
+        if(name!==''||firstname!==''){
+            names.push(firstname);
 	names.push(name); 
    names.push(today);
-  // names.push(firstname);
-	//}
+   
+	}
       
 
    
    res.send(JSON.stringify(names));
 });
+
+
 
 app.get('/ui/homepage.html', function (req, res){
   res.sendFile(path.join(__dirname,'ui', 'homepage.html'));
