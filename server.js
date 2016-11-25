@@ -116,7 +116,11 @@ app.get('/test-db',function(req,res){
         }
     });
 });
-
+var counter = 0;
+app.get('/counter',function(req,res){
+    counter = counter + 1;
+    res.send(counter.toString());
+});
 app.get('/ui/homepage.html', function (req, res){
   res.sendFile(path.join(__dirname,'ui', 'homepage.html'));
 });
@@ -144,11 +148,8 @@ app.get('/ui/article3.html', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-var counter = 0;
-app.get('/counter',function(req,res){
-    counter = counter + 1;
-    res.send(counter.toString());
-});
+
+
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname,'ui', 'main.js'));
 });
