@@ -36,49 +36,44 @@ app.get('/hash/:input', function(req,res) {
     res.send(hashedString);
 });
 
-app.post('/create-user' , function(req,res){
-    var username = req.body.username;
-    var password = req.body.password;
-    var salt = crypto.randomBytes(128).toString('hex');
+app.post('/create-user', function (req, res) {
+    var username=req.body.username;
+     var password=req.body.password;
+    var salt=crypto.randomBytes(128).toString('hex');
     var dbString = hash(password,salt);
-    pool.query('INSERT INTO "user" (username, password) VALUES ($1,$2)' , [username, dbString], function(err,result){
-        if(err) {
+    pool.query('INSERT INTO "user" (username,password) VALUES($1,$2)',[username, dbString],function (err,result){
+         if (err){
             res.status(500).send(err.toString());
-        } else{
-            res.send('User successfully created: ' + username);
+        }else {
+            res.send('User successfully created: '+ username);
         }
+        
     });
-    
 });
-
-app.post('/login', function(req,res){
-    var username = req.body.username;
-    var password = req.body.password;
-    
-    pool.query('SELECT * FROM "user" WHERE username = $1' , [username], function(err,result){
-        if(err) {
+app.post('/login', function (req, res) {
+    var username=req.body.username;
+     var password=req.body.password;
+   
+    pool.query('SELECT * FROM "user" WHERE username=$1',[username],function (err,result){
+         if (err){
             res.status(500).send(err.toString());
-        } else{
-            if(result.rows.length === 0){
-                res.send(403).send('username/password is invalid');
-            } else {
-                var dbString = result.rows[0].password;
-                var salt = dbString.split('$')[2];
-                var hashedPassword = hash(password, salt);
-                if (hashedPassword === dbString) {
-                    
-                     // Set the session
-                req.session.auth = {userId: result.rows[0].id};
-                // set cookie with a session id
-                // internally, on the server side, it maps the session id to an object
-                // { auth: {userId }}
-                
-                    res.send('credntials correct!');
-                } else {
-                    res.send(403).send('username/password is invalid');
-                }
-                }
+        }else {
+            if (result.rows.length===0){
+                res.send(403).send('usename/password is invalid');
+            }else {
+                var dbString=result.rows[0].password;
+               var salt=dbString.split('$')[2];
+               var hashedPassword=hash(password,salt);
+               if(hashedPassword===dbString){
+                    req.session.auth = {userId: result.rows[0].id};
+               res.send('credentials correct!'); 
+               }else {
+                    res.send(403).send('usename/password is invalid');
+               
+               }
             }
+           
+        }
         
     });
 });
@@ -89,7 +84,6 @@ app.get('/check-login', function (req, res) {
        pool.query('SELECT * FROM "user" WHERE id = $1', [req.session.auth.userId], function (err, result) {
            if (err) {
               res.status(500).send(err.toString());
-              
            } else {
               res.send(result.rows[0].username);    
            }
@@ -99,13 +93,23 @@ app.get('/check-login', function (req, res) {
    }
 });
 
-
-
 app.get('/logout', function (req, res) {
    delete req.session.auth;
    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
 
+var pool = new Pool(config);
+app.get('/test-db', function (req, res) {
+    pool.query('SELECT * FROM test', function(err,result){
+        if (err){
+            res.status(500).send(err.toString());
+        }else {
+            res.send(JSON.stringify(result.rows));
+        }
+        
+    });
+ 
+});
 var counter = 0;
 app.get('/counter',function(req,res){
     counter = counter + 1;
