@@ -30,7 +30,7 @@ function loadLoginForm () {
               // Take some action
               if (request.status === 200) {
                   submit.value = 'Sucess!';
-                  //window.open('http://nusrathyasin.imad.hasura-app.io/ui/homepage.html');
+                  window.open('http://nusrathyasin.imad.hasura-app.io/ui/homepage.html');
               } else if (request.status === 403) {
                   submit.value = 'Invalid credentials. Try again?';
               } else if (request.status === 500) {
