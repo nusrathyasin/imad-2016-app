@@ -93,7 +93,13 @@ function loadLoginForm () {
     
 
 }
-
+function escapeHTML (text)
+{
+    var $text = document.createTextNode(text);
+    var $div = document.createElement('div');
+    $div.appendChild($text);
+    return $div.innerHTML;
+}
 
 
 
@@ -134,6 +140,23 @@ loadLogin();
 
 
 //counter code
+function getCounter(){
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+    if(request.readyState === XMLHttpRequest.DONE) {
+        if (request.status === 200) {
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
+        }
+    }
+};
+ request.open('GET', '/counter', true);
+    request.send(null);
+}
+
+getCounter();
+//
 var button = document.getElementById('counter');
 //var counter=0;
 button.onclick = function() {
