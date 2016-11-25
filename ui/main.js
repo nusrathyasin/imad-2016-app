@@ -198,11 +198,9 @@ var request = new XMLHttpRequest();
 				var list="";
 				for(var i=0;i<names.length;i++)
 				{
-				   list="<div class='commentbox'><div style='float:left;width:50%'><b>"+names[i]+"</b></div><div><b>"+names[i+2]+"</b></div><hr/><br/>"+names[i+1]+"</div>" + list;
-				i=i+2;
-				}
+				   
 			                   // list += '<li  class="commentbox">' + names[i] + '</li>';
-			//	}
+				}
 			var ul = document.getElementById('namelist');
 			list+="<p id='db'></p><br/>";
 			ul.innerHTML=list;
@@ -216,7 +214,7 @@ var request = new XMLHttpRequest();
 var name = nameInput.value;
 var firstname = document.getElementById('firstname').value;
 
-request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?name='+name+'&firstname='+firstname,true);
+request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?name='+name,true);
 request.send(null);
 
 };
