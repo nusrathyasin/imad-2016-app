@@ -208,7 +208,7 @@ var request = new XMLHttpRequest();
 			}
 		}
 	}
-	}
+	};
 
 
    var nameInput =document.getElementById('name');
