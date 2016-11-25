@@ -120,6 +120,15 @@ app.get('/counter1',function(req,res){
     counter1 = counter1 + 1;
     res.send(counter1.toString());
 });
+var names = [];
+app.get('/submit-name', function(req,res){
+    var name = req.query.name;
+    var today = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+   names.push(name);
+   names.push(today);
+   res.send(JSON.stringify(names));
+});
+
 app.get('/ui/homepage.html', function (req, res){
   res.sendFile(path.join(__dirname,'ui', 'homepage.html'));
 });
@@ -153,12 +162,7 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname,'ui', 'main.js'));
 });
 
-var names = [];
-app.get('/submit-name', function(req,res){
-    var name = req.query.name;
-   names.push(name);
-   res.send(JSON.stringify(names));
-});
+
 
 
 
