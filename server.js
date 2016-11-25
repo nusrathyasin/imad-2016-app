@@ -125,12 +125,12 @@ var names = [];
 app.get('/submit-name', function(req,res){
     var name = req.query.name;                                                                                                                                                                           
     var today = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
-        var firsrname = req.query.firstname;
-        if(name!==''||firstname!==''){
+        //var firsrname = req.query.firstname;
+        //if(name!==''||firstname!==''){
 	names.push(name); 
    names.push(today);
-   names.push(firstname);
-	}
+  // names.push(firstname);
+	//}
       
 
    
