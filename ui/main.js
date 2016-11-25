@@ -206,7 +206,7 @@ function loadCommentForm () {
                 // Take some action
                 if (request.status === 200) {
                     // clear the form & reload all the comments
-                    document.getElementById('comment_text').value = '';
+                    document.getElementById('name').value = '';
                     loadComments();    
                 } else {
                     alert('Error! Could not submit comment');
@@ -216,7 +216,7 @@ function loadCommentForm () {
         };
         
         // Make the request
-        var comment = document.getElementById('comment_text').value;
+        var comment = document.getElementById('name').value;
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
@@ -256,12 +256,12 @@ function loadComments () {
 loadComments();
 //
 //comment box
-var submit =document.getElementById('submit_btn');
-submit.onclick = function() {
+//var submit =document.getElementById('submit_btn');
+//submit.onclick = function() {
     //create a request object
-    var request = new XMLHttpRequest();
+   // var request = new XMLHttpRequest();
     //capture response nd store it in a variable
-    request.onreadystatechange = function() {
+    //request.onreadystatechange = function() {
         if(request.readyState === XMLHttpRequest.DONE){
             if(request.status ===200){
                 var names = request.responseText;
@@ -271,6 +271,8 @@ submit.onclick = function() {
                 
                 for(var i=0;i<names.length;i++){
                     list += '<li  class="commentbox">' + names[i] + '</li>';
+                 <div style='color:#04d99d;font-weight:bold;font-variant: small-caps'>${escapeHTML(commentsData[i].username)}</div> - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()}
+                        </div>   
                     
                 }
                 
@@ -281,9 +283,9 @@ submit.onclick = function() {
                 }
             }
         };
-var nameInput =document.getElementById('name');
-var name = nameInput.value;
-request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?name=' + name,true);
-request.send(null);
+//var nameInput =document.getElementById('name');
+//var name = nameInput.value;
+//request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?name=' + name,true);
+//request.send(null);
 
 };
