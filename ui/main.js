@@ -206,7 +206,7 @@ function loadCommentForm () {
                 // Take some action
                 if (request.status === 200) {
                     // clear the form & reload all the comments
-                    document.getElementById('name').value = '';
+                    document.getElementById('comment_text').value = '';
                     loadComments();    
                 } else {
                     alert('Error! Could not submit comment');
@@ -217,7 +217,7 @@ function loadCommentForm () {
         
         // Make the request
         var comment = document.getElementById('name').value;
-        request.open('POST', '/submit-comment/' + currentArticleTitle, true);
+        request.open('POST', '/submit-comment/' , true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
         submit.value = 'Submitting...';
