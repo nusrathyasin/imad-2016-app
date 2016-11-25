@@ -13,11 +13,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
          <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-            <style>
-            body{
-                margin:auto;
-                width:95%;
-            }
+<style>
+body{
+  margin:auto;
+  width:95%;
+}
              
 #cat{
   background:url("http://ailievski.com/wp-content/uploads/2014/11/bp_background_2_blue1.jpg");
@@ -41,56 +41,38 @@ margin-left:70px;
 margin-right:70px;
 }
 .box1{
-       
-                
-              
-             
-             margin:1%;
-                height:250px;
-width:250px;
+  margin:1%;
+  height:250px;
+  width:250px;
   border-radius:20px;
-  
-	border:3px solid grey;
+  border:3px solid grey;
   padding-left:20px;
-	padding-bottom:4px;
+  padding-bottom:4px;
   padding-right:20px;
-	color:white;
-	
-  }
-  .box2{
-       
-                
-              
-             
-             margin:1%;
-                height:250px;
-width:250px;
+  color:white;
+}
+.box2{
+ margin:1%;
+ height:250px;
+ width:250px;
+ border-radius:20px;
+ border:3px solid grey;
+ padding-left:20px;
+ padding-bottom:4px;
+ padding-right:20px;
+ color:white;
+}
+.box3{
+  width:250px;
+  margin:1%;
+  height:250px;
   border-radius:20px;
-  
-	border:3px solid grey;
+  border:3px solid grey;
   padding-left:20px;
-	padding-bottom:4px;
+  padding-bottom:4px;
   padding-right:20px;
-	color:white;
-	
-  }
-  .box3{
-       
-                
-              
-             width:250px;
-             margin:1%;
-                height:250px;
-
-  border-radius:20px;
-  
-	border:3px solid grey;
-  padding-left:20px;
-	padding-bottom:4px;
-  padding-right:20px;
-	color:white;
-	
-  }
+  color:white;
+}
 
 .comment{
   border:3px solid grey;
@@ -134,65 +116,55 @@ width:250px;
   height:80px;
   width:90px;
   border-radius:20%;
-  
-  
- 
 }
 #count1{
-    font-size:45px;
+ font-size:45px;
 }
 #login{
-font-family:Viner Hand ITC;
-float:right;
-color:white;
-margin-right:40px;
+ font-family:Viner Hand ITC;
+ float:right;
+ color:white;
+ margin-right:40px;
 }
 @media screen and (min-width: 300px){
-
 .box1, .box2, .box3{
-
-margin-left:0px !important;
-margin-right:0px;
-
-width:auto;
-
+ margin-left:0px !important;
+ margin-right:0px;
+ width:auto;
 }
 }
-         </style>
-         <script>
-             $(document).ready(function(){
+</style>
+<script>
+    $(document).ready(function(){
     $("#likeme").click(function(){
         $(".tog").toggle(1000);
     });
-    
 });
-         </script>
-    </head>
+</script>
+</head>
         
- <body id="cat">
+<body id="cat">
    <div id="login"></div>     
- <div class="wrapper">
-    <h1><font size="20"<b>NusrathYasin</b></font></h1>
-  </div>
-  <div class="container">
-    <div class="header">
-      <center>
-       
-        <a href="http://nusrathyasin.imad.hasura-app.io/" class="btn btn-default btn-lg">HOME <span class="glyphicon glyphicon-home"></span> </a>
+     <div class="wrapper">
+        <h1><font size="20"<b>NusrathYasin</b></font></h1>
+     </div>
+   <div class="container">
+     <div class="header">
+        <center>
+         <a href="http://nusrathyasin.imad.hasura-app.io/" class="btn btn-default btn-lg">HOME <span class="glyphicon glyphicon-home"></span> </a>
         <div class="btn-group">
         <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">MY ARTICLES <span class="glyphicon glyphicon-list-alt"></span>  <span class="caret"> </span></button>
-          <ul class="dropdown-menu" role="menu">
-          <li> <a href="/ui/article1.html" target="_blank">ARTICLE1 </a></li>
-             <li><a href="/ui/article2.html" target="_blank" >ARTICLE2 </a> </li>
-             <li><a href="/ui/article3.html" >ARTICLE3 </a> </li>
-          </ul>
+         <ul class="dropdown-menu" role="menu">
+         <li> <a href="/ui/article1.html" target="_blank">ARTICLE1 </a></li>
+         <li><a href="/ui/article2.html" target="_blank" >ARTICLE2 </a> </li>
+         <li><a href="/ui/article3.html" >ARTICLE3 </a> </li>
+         </ul>
         </div>
         <a href="#about" class="btn btn-default btn-lg">ABOUT<span class="glyphicon glyphicon-user"></span></a>
         <a href="#contact" class="btn btn-default btn-lg">CONTACT <span class="glyphicon glyphicon-envelope"></span></a>
-  </center>
-   
-  <hr>
-  </div>
+        </center>
+<hr>
+   </div>
   <div id="about">
       <center>
     <img src="https://thumbs.dreamstime.com/x/asian-girl-cartoon-character-black-straight-hair-light-skin-draw-retro-comic-style-42012649.jpg" class="img-circle" width="204" height="200"/>
@@ -227,20 +199,12 @@ width:auto;
     </div>
     
 <hr>
- 
-
-
-<!-- <div class="container-fluid"> -->
-   
-     <h2 style="font-family:Viner Hand ITC; color:white"><font size="5" >post your comments...</font></h2>
+<h2 style="font-family:Viner Hand ITC; color:white"><font size="5" >post your comments...</font></h2>
  
 <br>
   <textarea id="name" rows="4" cols="35" placeholder="Type your comment here..."></textarea>
-
-          
-           <br>
-          
-           <button class="btn btn-default btn-md" id="submit_btn">Submit</button> 
+  <br>
+<button class="btn btn-default btn-md" id="submit_btn">Submit</button> 
   
  <br><br>
     <div class="comment">
@@ -283,7 +247,7 @@ width:auto;
 <br>
 <h6 align="center"><font size="2" color="white">Designed by Nusrath</font></h6>
 
-
+</div>
 
 
         <script type="text/javascript" src="/ui/main.js"> </script>
