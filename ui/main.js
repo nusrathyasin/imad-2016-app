@@ -198,10 +198,9 @@ var request = new XMLHttpRequest();
 				var list="";
 				for(var i=0;i<names.length;i++)
 				{
-				   list+="<div  class='commentbox'><div style='float:left;width:50%'><b>"+names[i]+"</b></div><div style='float:right;text-align:right;width:50%'><b>"+names[i+2]+"</b></div></div>" + list;
-				i=i+2;
+				  
 				
-			                    //list += '<li  class="commentbox">' + names[i] + '</li>';
+			                    list += '<li  class="commentbox">' + names[i] + '</li>';
 				}
 			var ul = document.getElementById('namelist');
 			list+="<p id='db'></p><br/>";
