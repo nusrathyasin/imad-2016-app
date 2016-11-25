@@ -122,7 +122,7 @@ app.get('/counter1',function(req,res){
 });
 
 var names = [];
-app.get('/submit-name', function(req,res){
+app.get('/submit-btn', function(req,res){
     var name = req.query.name;                                                                                                                                                                           
     var today = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
         var firsrname = req.query.firstname;
