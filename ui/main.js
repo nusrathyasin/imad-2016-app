@@ -214,7 +214,7 @@ var request = new XMLHttpRequest();
 
    var nameInput =document.getElementById('name');
 var name = nameInput.value;
-request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?name=' + name,true);
+request.open('GET','http://nusrathyasin.imad.hasura-app.io/submit-name?name='&firstname='+firstname + name,true);
 request.send(null);
 
 };
