@@ -1,3 +1,6 @@
+/ Eg: coco98.imad.hasura-app.io/articles/article-one will result in article-one
+var currentArticleTitle = window.location.pathname.split('/')[2];
+
 function loadCommentForm () {
     var commentFormHtml = `
         <h5>Submit a comment</h5>
@@ -30,14 +33,38 @@ function loadCommentForm () {
         };
         
         // Make the request
-        var comment = document.getElementById('name').value;
-        request.open('POST', '/submit-comment' , true);
+        var comment = document.getElementById('comment_text').value;
+        request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
         submit.value = 'Submitting...';
         
     };
 }
+
+function loadLogin () {
+    // Check if the user is already logged in
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                loadCommentForm(this.responseText);
+            }
+        }
+    };
+    
+    request.open('GET', '/check-login', true);
+    request.send(null);
+}
+
+function escapeHTML (text)
+{
+    var $text = document.createTextNode(text);
+    var $div = document.createElement('div');
+    $div.appendChild($text);
+    return $div.innerHTML;
+}
+
 function loadComments () {
         // Check if the user is already logged in
     var request = new XMLHttpRequest();
@@ -50,9 +77,9 @@ function loadComments () {
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
                     content += `<div class="comment">
-                        <p style="color:#550C73">${escapeHTML(commentsData[i].comment)}</p>
+                        <p>${escapeHTML(commentsData[i].comment)}</p>
                         <div class="commenter">
-                            <div style='color:#04d99d;font-weight:bold;font-variant: small-caps'>${escapeHTML(commentsData[i].username)}</div> - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()}
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </div>
                     </div>`;
                 }
@@ -63,9 +90,11 @@ function loadComments () {
         }
     };
     
-    request.open('GET', '/get-comments/', true);
+    request.open('GET', '/get-comments/' + currentArticleTitle, true);
     request.send(null);
 }
 
+
+// The first thing to do is to check if the user is logged in!
+loadLogin();
 loadComments();
-loadCommentForm ();
