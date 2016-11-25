@@ -120,12 +120,14 @@ app.get('/counter1',function(req,res){
     counter1 = counter1 + 1;
     res.send(counter1.toString());
 });
+
 var names = [];
 app.get('/submit-name', function(req,res){
-    var name = req.query.name;
     var today = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
-   names.push(name);
+    var name = req.query.name;
    names.push(today);
+   names.push(name);
+   
    res.send(JSON.stringify(names));
 });
 
