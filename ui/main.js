@@ -157,7 +157,7 @@ request.onreadystatechange = function() {
 
 getCounter();
 //
-var button = document.getElementById('counter');
+var button = document.getElementById('counter1');
 //var counter=0;
 button.onclick = function() {
    // counter = counter+1;
