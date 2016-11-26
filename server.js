@@ -25,16 +25,7 @@ app.use(session({
 
 
 
-function createTemplate(data)
-{
-    var title=data.title;
-    var link=data.link;
-    var content=data.content;
-    var htmltemplate=`
-      
-        ;
-    return htmltemplate;
-}
+
 
 
 app.get('/', function (req, res) {
@@ -126,7 +117,7 @@ app.get('/get-articles', function (req, res) {
       }
    });
 });
-///////
+
 app.get('/get-comments/:articleName', function (req, res) {
    // make a select request
    // return a response with the results
