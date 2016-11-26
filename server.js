@@ -22,6 +22,43 @@ app.use(session({
     cookie:{ maxAgge: 1000 * 60 * 60 * 24 * 30}
 }));
 
+//////
+var articles={
+     'article1': {
+  title:'article one | NusrathYAsin',
+  link:`<a href="/article1">Article one</a>
+            <a href="/article2">Article two</a>
+            <a href="/article3">Article three</a>`,
+    content:` <p>This is my article one page, UNDER CONSTRUCTION!</p>`
+},
+     'article-two': {
+    title:'article two | NusrathYAsin',
+  link:`<a href="/article1">Article one</a>
+            <a href="/article2">Article two</a>
+            <a href="/article3">Article three</a>`,
+    content:` <p>This is my article two page, UNDER CONSTRUCTION!</p>`
+},
+     'article-three': {
+    title:'article three | NusrathYAsin',
+  link:`<a href="/article1">Article one</a>
+            <a href="/article2">Article two</a>
+            <a href="/article3">Article three</a>`,
+    content:` <p>This is my article three page, UNDER CONSTRUCTION!</p>`
+}
+};
+
+function createTemplate(data)
+{
+    var title=data.title;
+    var link=data.link;
+    var content=data.content;
+    var htmltemplate=`
+      
+        `;
+    return htmltemplate;
+}
+//////
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname,'ui', 'index.html'));
 });
@@ -99,17 +136,79 @@ app.get('/logout', function (req, res) {
 });
 
 var pool = new Pool(config);
-app.get('/test-db', function (req, res) {
-    pool.query('SELECT * FROM test', function(err,result){
-        if (err){
-            res.status(500).send(err.toString());
-        }else {
-            res.send(JSON.stringify(result.rows));
-        }
-        
-    });
- 
+
+app.get('/get-articles', function (req, res) {
+   // make a select request
+   // return a response with the results
+   pool.query('SELECT * FROM article ORDER BY date DESC', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
 });
+///////
+app.get('/get-comments/:articleName', function (req, res) {
+   // make a select request
+   // return a response with the results
+   pool.query('SELECT comment.*, "user".username FROM article, comment, "user" WHERE article.title = $1 AND article.id = comment.article_id AND comment.user_id = "user".id ORDER BY comment.timestamp DESC', [req.params.articleName], function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
+
+app.post('/submit-comment/:articleName', function (req, res) {
+   // Check if the user is logged in
+    if (req.session && req.session.auth && req.session.auth.userId) {
+        // First check if the article exists and get the article-id
+        pool.query('SELECT * from article where title = $1', [req.params.articleName], function (err, result) {
+            if (err) {
+                res.status(500).send(err.toString());
+            } else {
+                if (result.rows.length === 0) {
+                    res.status(400).send('Article not found');
+                } else {
+                    var articleId = result.rows[0].id;
+                    // Now insert the right comment for this article
+                    pool.query(
+                        "INSERT INTO comment (comment, article_id, user_id) VALUES ($1, $2, $3)",
+                        [req.body.comment, articleId, req.session.auth.userId],
+                        function (err, result) {
+                            if (err) {
+                                res.status(500).send(err.toString());
+                            } else {
+                                res.status(200).send('Comment inserted!')
+                            }
+                        });
+                }
+            }
+       });     
+    } else {
+        res.status(403).send('Only logged in users can comment');
+    }
+});
+
+app.get('/articles/:articleName', function (req, res) {
+  // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
+  pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
+    if (err) {
+        res.status(500).send(err.toString());
+    } else {
+        if (result.rows.length === 0) {
+            res.status(404).send('Article not found');
+        } else {
+            var articleData = result.rows[0];
+            res.send(createTemplate(articleData));
+        }
+    }
+  });
+});
+
+//////
 var counter = 0;
 app.get('/counter',function(req,res){
     counter = counter + 1;
@@ -171,7 +270,9 @@ app.get('/ui/main.js', function (req, res) {
 
 
 
-
+app.get('/ui/:fileName', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
+});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
