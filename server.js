@@ -22,12 +22,6 @@ app.use(session({
     cookie:{ maxAgge: 1000 * 60 * 60 * 24 * 30}
 }));
 
-
-
-
-
-
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname,'ui', 'index.html'));
 });
