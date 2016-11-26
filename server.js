@@ -23,7 +23,7 @@ app.use(session({
 }));
 
 //////
-var articleName={
+var articles={
      'article1': {
   title:'article one | NusrathYAsin',
   link:`<a href="/article1">Article one</a>
